@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(82, 82, 171), rgb(233, 233, 135));
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+    font-size: 3rem;
+  }
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.2rem;
+  }
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgba(0, 93, 146, 0.777);
+    &.hover {
+      background-color: yellow;
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  div.todo {
+    width: 50vw;
+    display: flex;
+    margin: 0.2rem 0rem;
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.todo-text {
+      width: 50%;
+      text-align: center;
+    }
+    p.todo-time {
+      width: 30%;
+      text-align: center;
+    }
+  }
+}
