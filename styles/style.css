@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+i {
+  pointer-events: none;
+}
+
 body {
   background: -webkit-gradient(linear, left top, right top, from(#5252ab), to(#e9e987));
   background: linear-gradient(90deg, #5252ab, #e9e987);
@@ -88,6 +92,8 @@ section div.todo {
   display: -ms-flexbox;
   display: flex;
   margin: 0.2rem 0rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 section div.todo p {
@@ -105,5 +111,49 @@ section div.todo p.todo-text {
 section div.todo p.todo-time {
   width: 30%;
   text-align: center;
+}
+
+section div.todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+section div.todo button.trash {
+  background-color: red;
+}
+
+section div.todo button.complete {
+  background-color: greenyellow;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
 }
 /*# sourceMappingURL=style.css.map */
