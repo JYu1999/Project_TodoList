@@ -194,3 +194,16 @@ function mergeSort(arr) {
 }
 
 //console.log(mergeSort(JSON.parse(localStorage.getItem("list"))));
+
+let sortButton = document.querySelector("div.sort button");
+sortButton.addEventListener("click", () => {
+  let sortedArray = mergeSort(JSON.parse(localStorage.getItem("list")));
+  localStorage.setItem("list", JSON.stringify(sortedArray));
+
+  //remove data
+  let len = section.children.length;
+  for (let i = 0; i < len; i++) {
+    section.children[0].remove();
+  }
+  loadData();
+});
