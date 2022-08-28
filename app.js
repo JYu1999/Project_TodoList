@@ -17,6 +17,39 @@ add.addEventListener("click", (e) => {
     alert("please enter some Text.");
     return;
   }
+
+  if (
+    todoMonth == 1 ||
+    todoMonth == 3 ||
+    todoMonth == 5 ||
+    todoMonth == 7 ||
+    todoMonth == 8 ||
+    todoMonth == 10 ||
+    todoMonth == 12
+  ) {
+    if (todoDate > 31 || todoDate < 1) {
+      alert("please enter correct date.");
+      return;
+    }
+  } else if (
+    todoMonth == 4 ||
+    todoMonth == 6 ||
+    todoMonth == 9 ||
+    todoMonth == 11
+  ) {
+    if (todoDate > 30 || todoDate < 1) {
+      alert("please enter correct date.");
+      return;
+    }
+  } else if (todoMonth == 2) {
+    if (todoDate > 28 || todoDate < 1) {
+      alert("please enter correct date.");
+      return;
+    }
+  } else {
+    alert("please enter correct month.");
+    return;
+  }
   //create a todo
   let todo = document.createElement("div");
   todo.classList.add("todo");
